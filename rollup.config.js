@@ -6,6 +6,7 @@ import commonjs from 'rollup-plugin-commonjs';
 import babel from 'rollup-plugin-babel';
 import nodeGlobals from 'rollup-plugin-node-globals';
 import { terser } from 'rollup-plugin-terser';
+import postcss from 'rollup-plugin-postcss';
 
 const babelOptions = {
   exclude: /node_modules/,
@@ -79,6 +80,9 @@ export default {
   plugins: [
     typescript({
       typescript: require('typescript'),
+    }),
+    postcss({
+      plugins: [],
     }),
     nodeResolve(nodeOptions),
     babel(babelOptions),

@@ -1,4 +1,4 @@
-# React simple library
+# React simple library. Typescript, Scss, Rollup.
 
 React Starter Components Package
 
